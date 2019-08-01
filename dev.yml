@@ -1,5 +1,5 @@
 ---
-- name: deploy the gisdev software stack
+- name: deploy the software stack
   hosts: localhost
   connection: local
 
