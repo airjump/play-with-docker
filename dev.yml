@@ -40,7 +40,6 @@
         - pandas
         - scipy
         - shapely
-        - django
         - pyshp
         - geopy
         - pyproj
@@ -48,13 +47,10 @@
         - ipdb
         - scikit-learn
         - pyzmq
-        - tornado
         - pygments
         - sphinx
         - patsy
-        - statsmodels
         - ggplot
-        - rpy2
         - fabric
 
     - name: install node/js dependencies
