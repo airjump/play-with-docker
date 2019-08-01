@@ -20,6 +20,7 @@
         - subversion
         - mercurial
         - vim
+        - python-lxml
         - openvpn
         - sqlite
         - libpq-dev
