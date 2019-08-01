@@ -1,0 +1,64 @@
+---
+- name: deploy the gisdev software stack
+  hosts: localhost
+  connection: local
+
+  tasks:
+
+    - name: Get aptitude for upgrade
+      apt: pkg=aptitude state=present
+
+    - name: Safe system upgrade via aptitude
+      apt: upgrade=safe
+
+    - name: install base packages
+      apt: pkg={{item}} state=present update_cache=yes cache_valid_time=604800
+      with_items:
+        - sysstat
+        - htop
+        - git
+        - subversion
+        - mercurial
+        - vim
+        - openvpn
+        - sqlite
+        - libpq-dev
+        - python-psycopg2
+        - imagemagick
+        - python-mapscript
+        - python-matplotlib
+        - liblas-bin
+        - gdal-bin
+        - python-gdal
+
+    - name: grab build dependencies for numpy and scipy
+      command: apt-get -y build-dep python-scipy
+
+    - name: Install global python requirements
+      pip: name={{item}} state=present
+      with_items:
+        - pandas
+        - scipy
+        - shapely
+        - django
+        - pyshp
+        - geopy
+        - pyproj
+        - ipython
+        - ipdb
+        - scikit-learn
+        - pyzmq
+        - tornado
+        - pygments
+        - sphinx
+        - patsy
+        - statsmodels
+        - ggplot
+        - rpy2
+        - fabric
+
+    - name: install node/js dependencies
+      npm: name={{item}} global=yes
+      with_items:
+        - yo
+        - generator-angular
