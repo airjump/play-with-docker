@@ -1,3 +1,4 @@
 from lxml import etree
 tree = etree.parse("sample.xml")
-print etree.tostring(tree)
+root = tree.getroot()
+print root.find("a").text
