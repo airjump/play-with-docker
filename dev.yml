@@ -18,14 +18,7 @@
         - htop
         - git
         - subversion
-        - mercurial
         - vim
-        - python-lxml
-        - openvpn
-        - sqlite
-        - libpq-dev
-        - python-psycopg2
-        - imagemagick
         - python-mapscript
         - python-matplotlib
         - liblas-bin
@@ -35,23 +28,12 @@
     - name: Install global python requirements
       pip: name={{item}} state=present
       with_items:
-        - pandas
-        - shapely
-        - pyshp
-        - geopy
         - pyproj
         - ipython
-        - ipdb
-        - scikit-learn
         - pyzmq
         - pygments
         - sphinx
         - patsy
         - ggplot
         - fabric
-
-    - name: install node/js dependencies
-      npm: name={{item}} global=yes
-      with_items:
-        - yo
-        - generator-angular
+        - python-lxml
