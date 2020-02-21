@@ -16,6 +16,7 @@
       with_items:
         - sysstat
         - htop
+        - python3
         - git
         - subversion
         - vim
