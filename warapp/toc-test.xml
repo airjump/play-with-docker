@@ -1,0 +1,27 @@
+<contents>
+  <part title="Lucene Basics(or Fundamentals)">
+    <chapter title="Lucene Searching">
+      <section type="internal" title="Lucene Scoring">
+        <leaf title="How Lucene scoring works" seotitle="how-lucene-scoring-works">
+        </leaf>
+      </section>    
+      <section type="terminal" title="" seotitle="">
+        <leaf title="hello world" seotitle="how-lucene-scoring-works">
+        </leaf>
+      </section>
+    </chapter>
+  </part>
+ 
+  <part title="Lucene Index">
+    <chapter title="Lucene Searching">
+      <section type="internal" title="Lucene Scoring">
+        <leaf title="How Lucene indexing works" seotitle="how-lucene-indexing-works">
+        </leaf>
+        <leaf title="Lucene Index tutorial" seotitle="lucene-index-tutorial">
+        </leaf>
+      </section>    
+      <section type="terminal" title="" seotitle="">
+      </section>
+    </chapter>
+  </part>  
+</contents>
